@@ -37,6 +37,14 @@ Board: Adafruit Feather M0
 FQBN:  adafruit:samd:adafruit_feather_m0:opt=small,usbstack=arduino,debug=off
 ```
 
+## Mechanical Files
+
+The latest UFP2 enclosure STL files are archived under:
+
+```text
+UFP_latest/UFP_latest/
+```
+
 ## Historical Compiler Log
 
 The original Arduino IDE 1.8.19 compiler log is archived at:
@@ -44,4 +52,3 @@ The original Arduino IDE 1.8.19 compiler log is archived at:
 ```text
 docs/arduino-ide-1.8.19-build.log
 ```
-
