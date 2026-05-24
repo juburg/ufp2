@@ -1,0 +1,12 @@
+Output: NC Drill Files
+Type  : NC Drill
+From  : Project [UFP2.PrjPcb]
+   Generated File[UFP2.TXT]
+   Generated File[UFP2.LDP]
+   Generated File[UFP2.DRR]
+
+
+Files Generated   : 3
+Documents Printed : 0
+
+Finished Output Generation At 15:32:22 On 21.09.2018
