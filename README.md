@@ -26,6 +26,27 @@ Use Arduino CLI:
 .\tools\build-ufp2.ps1
 ```
 
+## Flash
+
+Connect the Adafruit Feather M0 by USB. If Windows assigns a single matching
+serial port, the script can select it automatically:
+
+```powershell
+.\tools\flash-ufp2.ps1 -SkipCoreInstall
+```
+
+To select the port explicitly:
+
+```powershell
+.\tools\flash-ufp2.ps1 -Port COM7 -SkipCoreInstall
+```
+
+If PowerShell script execution is blocked:
+
+```bat
+tools\flash-ufp2.bat -Port COM7 -SkipCoreInstall
+```
+
 The script installs and uses `adafruit:samd@1.7.17` in a workspace-local Arduino CLI
 data directory and compiles only against the vendored third-party libraries in this
 repository.

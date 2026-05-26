@@ -46,6 +46,18 @@ Adafruit_ZeroDMA 1.1.3
 .\tools\build-ufp2.ps1
 ```
 
+## Flash Command
+
+```powershell
+.\tools\flash-ufp2.ps1 -Port COM7 -SkipCoreInstall
+```
+
+The batch wrapper avoids PowerShell execution policy issues:
+
+```bat
+tools\flash-ufp2.bat -Port COM7 -SkipCoreInstall
+```
+
 ## Verified Output
 
 Fresh local build with the repository-local Arduino CLI path:
