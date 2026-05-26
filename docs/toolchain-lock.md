@@ -46,17 +46,22 @@ Adafruit_ZeroDMA 1.1.3
 .\tools\build-ufp2.ps1
 ```
 
-## Flash Command
+## Firmware Export
 
 ```powershell
-.\tools\flash-ufp2.ps1 -Port COM7 -SkipCoreInstall
+.\tools\export-ufp2-firmware.ps1 -SkipCoreInstall
 ```
 
 The batch wrapper avoids PowerShell execution policy issues:
 
-```bat
-tools\flash-ufp2.bat -Port COM7 -SkipCoreInstall
+```cmd
+tools\export-ufp2-firmware.bat -SkipCoreInstall
 ```
+
+The export creates `dist/UFP2_V160/UFP2_V160.bin`,
+`dist/UFP2_V160/UFP2_V160.hex`, and `dist/UFP2_V160/UFP2_V160.uf2`.
+The UF2 file uses SAMD21 family ID `0x68ED2B88` and target address `0x2000`,
+matching the Feather M0 linker script with the 8 KB bootloader region.
 
 ## Verified Output
 

@@ -26,26 +26,24 @@ Use Arduino CLI:
 .\tools\build-ufp2.ps1
 ```
 
-## Flash
+## Firmware Export
 
-Connect the Adafruit Feather M0 by USB. If Windows assigns a single matching
-serial port, the script can select it automatically:
-
-```powershell
-.\tools\flash-ufp2.ps1 -SkipCoreInstall
-```
-
-To select the port explicitly:
+To create firmware files for external flashing:
 
 ```powershell
-.\tools\flash-ufp2.ps1 -Port COM7 -SkipCoreInstall
+.\tools\export-ufp2-firmware.ps1 -SkipCoreInstall
 ```
 
 If PowerShell script execution is blocked:
 
-```bat
-tools\flash-ufp2.bat -Port COM7 -SkipCoreInstall
+```cmd
+tools\export-ufp2-firmware.bat -SkipCoreInstall
 ```
+
+The exported files are written to `dist/UFP2_V160/` as `.bin`, `.hex`, and `.uf2`.
+The `.uf2` file targets the Adafruit Feather M0/SAMD21 application start address
+`0x2000` and can be copied to a Feather M0 UF2 bootloader drive if that bootloader
+is installed.
 
 The script installs and uses `adafruit:samd@1.7.17` in a workspace-local Arduino CLI
 data directory and compiles only against the vendored third-party libraries in this
